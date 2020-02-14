@@ -1,0 +1,50 @@
+.galeria a::after {
+    position: absolute;
+    bottom: 0.3rem;
+    left: 1.2rem;
+    content: "";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: transparent url(../img/instagram_white.svg) no-repeat center center;
+    background-size: auto;
+	background-size: 100% 100%;
+}
+.columna-galeria{
+	padding: 0px !important;
+	margin: 0px !important;
+	width: 100%;
+}
+.galeria-item-info {
+	position: absolute;
+    bottom: 0.2rem;
+    right: 0.2rem;
+    display: block;
+	background-size: auto;
+	background-size: 100% 100%;
+	display: block;
+    height: 2rem;
+	width:auto;
+}
+.galeria-item-info ul {
+   bottom: 0.3rem !important;
+}
+.galeria-item-info li {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 600;
+	color: white;
+	/*margin: 0 20px 0 0;*/
+	bottom: 0.3rem !important;
+    margin-right: 2rem;
+}
+.galeria-item-likes {
+    margin-right: 0.5rem !important;
+}	
+.imagen-galeria{
+	height: auto;
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	border: 0;
+}
