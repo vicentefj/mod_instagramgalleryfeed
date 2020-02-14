@@ -11,12 +11,12 @@
 	<description>MOD_INSTAGRAMFEED_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
 	<files>
-		<filename module="mod_instagramfeed">mod_instagramfeed.php</filename>
+		<filename module="mod_instagramfeed">mod_instagramgalleryfeed.php</filename>
 		<folder>tmpl</folder>
 		<folder>css</folder>
 		<folder>img</folder>
 		<filename module="mod_instagramfeed">helper.php</filename>
-		<filename module="mod_instagramfeed">mod_instagramfeed.xml</filename>
+		<filename module="mod_instagramfeed">mod_instagramgalleryfeed.xml</filename>
 	</files>
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.mod_instagramfeed.ini</language>

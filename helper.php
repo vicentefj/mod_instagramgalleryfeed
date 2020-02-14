@@ -2,7 +2,7 @@
 
 defined('_JEXEC') or die;
  
-class modInstagramFeedHelper{
+class modInstagramGalleryFeedHelper{
 	public static function getInstagramFeed($params){
 		return $params;
 	}
