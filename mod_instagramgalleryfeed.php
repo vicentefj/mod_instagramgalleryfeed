@@ -13,10 +13,10 @@ defined('_JEXEC') or die;
 //Carga el fichero helper.php
 require_once dirname(__FILE__) . '/helper.php';
 
-$items = modInstagramGalleryFeedHelper::getInstagramFeed($params); 
+$items = modInstagramgalleryfeedHelper::getInstagramFeed($params); 
 
 
 // Asignamos la vista a mostrar, por default
-require JModuleHelper::getLayoutPath('mod_instagramfeed');
+require JModuleHelper::getLayoutPath('mod_instagramgalleryfeed');
 ?>
 

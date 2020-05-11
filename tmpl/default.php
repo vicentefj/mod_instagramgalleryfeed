@@ -6,7 +6,9 @@ error_reporting(0);
 
 
 $doc = JFactory::getDocument();
-$doc->addStyleSheet(JURI::base(true).'/modules/mod_instagramfeed/css/mod_instagramfeed.css');
+$doc->addStyleSheet(JURI::base(true).'/modules/mod_instagramgalleryfeed/css/mod_instagramgalleryfeed.css');
+$doc->addStyleSheet(JURI::base(true).'/modules/mod_instagramgalleryfeed/css/bootstrap.min.css');
+$doc->addScript(JURI::root(true) . '/modules/mod_instagramgalleryfeed/css/bootstrap.min.js');
 $tipoBusqueda = $params['opcionbusqueda'];
 $url = "";
 $columnas = $params['columnas'];
@@ -22,13 +24,13 @@ if ($tipoBusqueda == 0){
 //Si la opcion de busqueda es etiqueta
 if ($tipoBusqueda == 1){
 	$url = 'https://www.instagram.com/explore/tags/' . $params["userhashtag"] . '/?__a=1';
-	$titol = '<i class="fa fa-instagram"></i> # ' . $params['userhashtag'];
+	$titol = '<i class="fab fa-instagram"></i> # ' . $params['userhashtag'];
 }
 $data = "";
 
 //Lanza error y termina ejecucion en caso de no poder leer el feed
 if(!$data = file_get_contents($url)){
-	echo JText::_( 'MOD_INSTAGRAMFEED_ERROR_LECTURA_URL' );
+	echo JText::_( 'MOD_INSTAGRAMGALLERYFEED_ERROR_LECTURA_URL' );
 	goto end;
 }
 $decodedData = json_decode($data);
@@ -46,7 +48,7 @@ if ($tipoBusqueda == 0){
 		echo '<div class="row">';
 		for ($i = 0; $i < $columnas; $i++) {
 			if (!$decodedData->graphql->user->edge_owner_to_timeline_media->edges[$foto]->node->thumbnail_resources[2]->src){
-				echo '</div><h3>' . JText::_( 'MOD_INSTAGRAMFEED_FOTOS_INSUFICIENTES' ) . '</h3>';
+				echo '</div><h3>' . JText::_( 'MOD_INSTAGRAMGALLERYFEED_FOTOS_INSUFICIENTES' ) . '</h3>';
 				goto end;
 			}
 			echo '<div class="col-sm center columna-galeria"><div class="galeria"><a href="https://www.instagram.com/p/'. $decodedData->graphql->user->edge_owner_to_timeline_media->edges[$foto]->node->shortcode .'" target="_blank" style="text-decoration: none; color: white;"><img src="' . $decodedData->graphql->user->edge_owner_to_timeline_media->edges[$foto]->node->thumbnail_resources[2]->src . '" class="imagen-galeria"/></a></div>'.
@@ -68,7 +70,7 @@ else if ($tipoBusqueda == 1){
 		echo '<div class="row">';
 		for ($i = 0; $i < $columnas; $i++) {
 			if (!$decodedData->graphql->hashtag->edge_hashtag_to_media->edges[$foto]->node->thumbnail_resources[3]->src){
-				echo '</div><h3>' . JText::_( 'MOD_INSTAGRAMFEED_FOTOS_INSUFICIENTES' ) . '</h3>';
+				echo '</div><h3>' . JText::_( 'MOD_INSTAGRAMGALLERYFEED_FOTOS_INSUFICIENTES' ) . '</h3>';
 				goto end;
 			}
 			echo '<div class="col-sm center columna-galeria"><div class="galeria"><a href="https://www.instagram.com/p/'. $decodedData->graphql->hashtag->edge_hashtag_to_media->edges[$foto]->node->shortcode .'" target="_blank" style="text-decoration: none; color: white;"><img src="' . $decodedData->graphql->hashtag->edge_hashtag_to_media->edges[$foto]->node->thumbnail_resources[3]->src . '" class="imagen-galeria"/></a></div>'.

@@ -8,37 +8,37 @@
 	<authorEmail>vfernandezj@gmail.com</authorEmail>
 	<authorUrl>www.kbsolutions.es</authorUrl>
 	<version>1.0.0</version>
-	<description>MOD_INSTAGRAMFEED_DESCRIPTION</description>
+	<description>MOD_INSTAGRAMGALLERYFEED_DESCRIPTION</description>
 	<scriptfile>script.php</scriptfile>
 	<files>
-		<filename module="mod_instagramfeed">mod_instagramgalleryfeed.php</filename>
+		<filename module="mod_instagramgalleryfeed">mod_instagramgalleryfeed.php</filename>
 		<folder>tmpl</folder>
 		<folder>css</folder>
 		<folder>img</folder>
-		<filename module="mod_instagramfeed">helper.php</filename>
-		<filename module="mod_instagramfeed">mod_instagramgalleryfeed.xml</filename>
+		<filename module="mod_instagramgalleryfeed">helper.php</filename>
+		<filename module="mod_instagramgalleryfeed">mod_instagramgalleryfeed.xml</filename>
 	</files>
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.mod_instagramfeed.ini</language>
-		<language tag="en-GB">en-GB/en-GB.mod_instagramfeed.sys.ini</language>
-		<language tag="es-ES">es-ES/es-ES.mod_instagramfeed.ini</language>
-		<language tag="es-ES">es-ES/es-ES.mod_instagramfeed.sys.ini</language>
-		<language tag="ca-ES">ca-ES/ca-ES.mod_instagramfeed.ini</language>
-		<language tag="ca-ES">ca-ES/ca-ES.mod_instagramfeed.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_instagramgalleryfeed.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_instagramgalleryfeed.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_instagramgalleryfeed.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_instagramgalleryfeed.sys.ini</language>
+		<language tag="ca-ES">ca-ES/ca-ES.mod_instagramgalleryfeed.ini</language>
+		<language tag="ca-ES">ca-ES/ca-ES.mod_instagramgalleryfeed.sys.ini</language>
 	</languages>
  
     <config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="opcionbusqueda" type="list" default="" required="true" label="MOD_INSTAGRAMFEED_OPCIONBUSQUEDA_LABEL" description="MOD_INSTAGRAMFEED_OPCIONBUSQUEDA_DESCRIPTION">
-					<option value="0">MOD_INSTAGRAMFEED_OPCIONBUSQUEDA_OPTION1</option>
-					<option value="1">MOD_INSTAGRAMFEED_OPCIONBUSQUEDA_OPTION2</option>
+				<field name="opcionbusqueda" type="list" default="" required="true" label="MOD_INSTAGRAMGALLERYFEED_OPCIONBUSQUEDA_LABEL" description="MOD_INSTAGRAMGALLERYFEED_OPCIONBUSQUEDA_DESCRIPTION">
+					<option value="0">MOD_INSTAGRAMGALLERYFEED_OPCIONBUSQUEDA_OPTION1</option>
+					<option value="1">MOD_INSTAGRAMGALLERYFEED_OPCIONBUSQUEDA_OPTION2</option>
 				</field>
 				
 				<field name = "userhashtag"
 						type = "text"
-						label = "MOD_INSTAGRAMFEED_USERHASHTAG_LABEL"
-						description = "MOD_INSTAGRAMFEED_USERHASHTAG_DESCRIPTION"
+						label = "MOD_INSTAGRAMGALLERYFEED_USERHASHTAG_LABEL"
+						description = "MOD_INSTAGRAMGALLERYFEED_USERHASHTAG_DESCRIPTION"
 						size = "50" >
 				</field>
 				<field
@@ -46,8 +46,8 @@
 					name="columnas"
 					default=""
 					required="true"
-					label="MOD_INSTAGRAMFEED_COLUMNAS_LABEL"
-					description="MOD_INSTAGRAMFEED_COLUMNAS_DESCRIPTION"
+					label="MOD_INSTAGRAMGALLERYFEED_COLUMNAS_LABEL"
+					description="MOD_INSTAGRAMGALLERYFEED_COLUMNAS_DESCRIPTION"
 				>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -67,8 +67,8 @@
 					name="filas"
 					default=""
 					required="true"
-					label="MOD_INSTAGRAMFEED_FILAS_LABEL"
-					description="MOD_INSTAGRAMFEED_FILAS_DESCRIPTION"
+					label="MOD_INSTAGRAMGALLERYFEED_FILAS_LABEL"
+					description="MOD_INSTAGRAMGALLERYFEED_FILAS_DESCRIPTION"
 				>
 					<option value="1">1</option>
 					<option value="2">2</option>
